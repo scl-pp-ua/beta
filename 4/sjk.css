@@ -1,0 +1,53 @@
+#event-tracker {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 220px;
+    background: rgba(38, 70, 83, 0.9);
+    border: 2px solid var(--gold);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.event-header {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--gold);
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(244, 162, 97, 0.3);
+    padding-bottom: 5px;
+}
+
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin: 8px 0;
+}
+
+.time-val {
+    color: #a8dadc;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.event-note {
+    font-size: 0.7rem;
+    opacity: 0.6;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Приховуємо на дуже маленьких екранах, щоб не заважало */
+@media (max-width: 480px) {
+    #event-tracker {
+        top: auto;
+        bottom: 20px;
+        right: 10px;
+        width: 180px;
+    }
+}
