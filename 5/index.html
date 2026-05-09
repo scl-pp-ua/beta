@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Clock UA | Час Скай</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Мета-теги для обкладинки (Open Graph) -->
+    <meta property="og:title" content="Sky Clock UA - Твій провідник у світі Світла">
+    <meta property="og:description" content="Розклад подій Sky: Children of the Light українською мовою.">
+    <meta property="og:image" content="cover.jpg">
+    <meta property="og:url" content="https://your-site.netlify.app">
+
+   <link rel="stylesheet" href="/beta/4/sjk.css">
+   <script src="sjfd.js"></script>
+</head>
+<body class="loading">
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <header>
+        <div class="lang-switch">
+            <button onclick="setLanguage('uk')">UA</button>
+            <button onclick="setLanguage('en')">EN</button>
+        </div>
+        <h1 id="main-title">Sky: Годинник Подій</h1>
+    </header>
+
+    <main>
+        <div class="clock-container">
+            <div class="event-card" id="geyser">
+                <h2 class="event-name" data-key="geyser">Геозер</h2>
+                <div class="timer" id="timer-geyser">00:00:00</div>
+            </div>
+            <div class="event-card" id="grandma">
+                <h2 class="event-name" data-key="grandma">Бабуся</h2>
+                <div class="timer" id="timer-grandma">00:00:00</div>
+            </div>
+        </div>
+
+        <button id="memory-btn" class="mobile-only" onclick="showMemory()" data-key="memory_btn">Викликати спогад</button>
+    </main>
+
+    <div id="notification-status">
+        <button onclick="requestNotifications()" data-key="notify_btn">Увімкнути сповіщення</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
